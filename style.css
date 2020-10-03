@@ -1,8 +1,11 @@
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    scroll-behavior: smooth;
 }
 
 #page {
@@ -12,6 +15,11 @@ body {
 .section-sides {
     padding-left: 10%;
     padding-right: 10%;
+}
+
+.section-up-bottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .section {
@@ -89,4 +97,74 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+}
+
+#team #people {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+#team #people .person {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: calc(49% - 20px);
+    margin: 10px 0.5%;
+    padding: 20px 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+#team #people .person ion-icon {
+    position: absolute;
+    margin-right: 50px;
+    font-size: 40px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#team #people .person:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#team #people .person:hover ion-icon {
+    opacity: 1;
+}
+
+#team #people .person img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+#team #people .person .description {
+    width: calc(60% - 20px);
+    padding-left: 20px;
+}
+
+#team #people .person .description h3,
+#team #people .person .description p {
+    margin: 0;
+    padding: 0;
+}
+
+#team .info {
+    display: none;
+    width: calc(100% - 2%);
+    padding: 0 1%;
+}
+
+#team .info ion-icon {
+    position: absolute;
+    right: calc(10% + 0.5%);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#footer {
+    text-align: center;
 }
