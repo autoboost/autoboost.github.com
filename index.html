@@ -67,43 +67,46 @@
                 <div id="people">
                     <script>
                         function openPerson(number) {
-                            for (var person = 0; person < $("#team .info").length; person++)
-                                $("#team #person" + person).hide(500);
-                            $("#team #person" + number).show(500);
+                            if ($("#team #person" + number).css("display") == "none") {
+                                for (var person = 0; person < $("#team .info").length; person++) {
+                                    $("#team #person" + person).hide(500);
+                                    $("#team #person-choice" + person).removeClass("active");
+                                }
+                                $("#team #person" + number).show(500);
+                                $("#team #person-choice" + number).addClass("active");
+                            }
                         }
 
                         function closePerson() {
-                            for (var person = 0; person < $("#team .info").length; person++)
+                            for (var person = 0; person < $("#team .info").length; person++) {
                                 $("#team #person" + person).hide(500);
+                                $("#team #person-choice" + person).removeClass("active");
+                            }
                         }
                     </script>
-                    <div class="person" onclick="openPerson(0)">
+                    <div id="person-choice0" class="person" onclick="openPerson(0)">
                         <img src="./img/team/afonso.png" />
                         <div class="description">
                             <h3>Afonso</h3>
                         </div>
-                        <ion-icon name="caret-forward-circle"></ion-icon>
                     </div>
-                    <div class="person" onclick="openPerson(1)">
+                    <div id="person-choice1" class="person" onclick="openPerson(1)">
                         <img src="./img/team/alexandre.png" />
                         <div class="description">
                             <h3>Alexandre</h3>
                         </div>
-                        <ion-icon name="caret-forward-circle"></ion-icon>
                     </div>
-                    <div class="person" onclick="openPerson(2)">
+                    <div id="person-choice2" class="person" onclick="openPerson(2)">
                         <img src="./img/team/diogo.png" />
                         <div class="description">
                             <h3>Diogo</h3>
                         </div>
-                        <ion-icon name="caret-forward-circle"></ion-icon>
                     </div>
-                    <div class="person" onclick="openPerson(3)">
+                    <div id="person-choice3" class="person" onclick="openPerson(3)">
                         <img src="./img/team/pedro.png" />
                         <div class="description">
                             <h3>Pedro</h3>
                         </div>
-                        <ion-icon name="caret-forward-circle"></ion-icon>
                     </div>
                 </div>
                 <div id="person0" class="info section-up-bottom">

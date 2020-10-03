@@ -108,10 +108,10 @@ body {
 #team #people .person {
     display: flex;
     align-items: center;
-    justify-content: right;
-    width: calc(49% - 20px);
+    justify-content: space-between;
+    width: calc(24% - 80px);
     margin: 10px 0.5%;
-    padding: 20px 10px;
+    padding: 20px 40px;
     background-color: rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: #000;
@@ -120,29 +120,18 @@ body {
     transition: background-color 0.5s;
 }
 
-#team #people .person ion-icon {
-    position: absolute;
-    margin-right: 50px;
-    font-size: 40px;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-#team #people .person:hover {
+#team #people .person:hover,
+#team #people .person.active {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-#team #people .person:hover ion-icon {
-    opacity: 1;
-}
-
 #team #people .person img {
-    width: 150px;
+    width: 50px;
     border-radius: 50%;
 }
 
 #team #people .person .description {
-    width: calc(60% - 20px);
+    /*width: calc(60% - 20px);*/
     padding-left: 20px;
 }
 
