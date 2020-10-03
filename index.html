@@ -40,12 +40,27 @@
                     />
                 </a>
             </div>
+            <script>
+                function toggleMenu() {
+                    $("#menu").toggle(500);
+                    $("#menu-open").toggle(500);
+                    $("#menu-close").toggle(500);
+                }
+            </script>
+            <ion-icon id="menu-open" name="menu" onclick="toggleMenu()"></ion-icon>
+            <ion-icon id="menu-close" name="close" onclick="toggleMenu()"></ion-icon>
             <div id="menu" class="section-sides">
                 <a
                         href="./"
                 >
                     <img
+                            class="desktop"
                             src="./img/logo_transparent.png"
+                            alt="AutoBoost Logo"
+                    />
+                    <img
+                            class="mobile"
+                            src="./img/logo_long_transparent.png"
                             alt="AutoBoost Logo"
                     />
                 </a>
@@ -64,66 +79,68 @@
             </div>
             <div id="team" class="section background">
                 <h2 class="title">Team</h2>
-                <div id="people">
-                    <script>
-                        let peopleInfo = {
-                            "afonso": {
-                                "name": "Afonso"
-                            },
-                            "alexandre": {
-                                "name": "Alexandre"
-                            },
-                            "diogo": {
-                                "name": "Diogo"
-                            },
-                            "pedro": {
-                                "name": "Pedro"
+                <div class="container">
+                    <div id="people">
+                        <script>
+                            let peopleInfo = {
+                                "afonso": {
+                                    "name": "Afonso"
+                                },
+                                "alexandre": {
+                                    "name": "Alexandre"
+                                },
+                                "diogo": {
+                                    "name": "Diogo"
+                                },
+                                "pedro": {
+                                    "name": "Pedro"
+                                }
+                            };
+                            let peopleIDs = Object.keys(peopleInfo);
+                            let selectedPerson = undefined;
+
+                            function openPerson(id) {
+                                peopleIDs.map(person => $("#team #person-" + person).removeClass("active"));
+                                if (selectedPerson !== id) {
+                                    if (!selectedPerson)
+                                        $("#team #personInfo").show(500);
+                                    selectedPerson = id;
+                                    $("#team #person-" + id).addClass("active");
+
+                                    // set info
+                                    $("#team #personInfo #name").html(peopleInfo[id].name);
+                                }
                             }
-                        };
-                        let peopleIDs = Object.keys(peopleInfo);
-                        let selectedPerson = undefined;
 
-                        function openPerson(id) {
-                            peopleIDs.map(person => $("#team #person-" + person).removeClass("active"));
-                            if (selectedPerson !== id) {
-                                if (!selectedPerson)
-                                    $("#team #personInfo").show(500);
-                                selectedPerson = id;
-                                $("#team #person-" + id).addClass("active");
-
-                                // set info
-                                $("#team #personInfo #name").html(peopleInfo[id].name);
+                            function closePerson() {
+                                peopleIDs.map(person => $("#team #person-" + person).removeClass("active"));
+                                $("#team #personInfo").hide(500);
+                                selectedPerson = undefined;
                             }
-                        }
-
-                        function closePerson() {
-                            peopleIDs.map(person => $("#team #person-" + person).removeClass("active"));
-                            $("#team #personInfo").hide(500);
-                            selectedPerson = undefined;
-                        }
-                    </script>
-                    <div id="person-afonso" class="person" onclick="openPerson('afonso')">
-                        <img src="./img/team/afonso.png" />
-                        <div class="description">
-                            <h3>Afonso</h3>
+                        </script>
+                        <div id="person-afonso" class="person" onclick="openPerson('afonso')">
+                            <img src="./img/team/afonso.png" />
+                            <div class="description">
+                                <h3>Afonso</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div id="person-alexandre" class="person" onclick="openPerson('alexandre')">
-                        <img src="./img/team/alexandre.png" />
-                        <div class="description">
-                            <h3>Alexandre</h3>
+                        <div id="person-alexandre" class="person" onclick="openPerson('alexandre')">
+                            <img src="./img/team/alexandre.png" />
+                            <div class="description">
+                                <h3>Alexandre</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div id="person-diogo" class="person" onclick="openPerson('diogo')">
-                        <img src="./img/team/diogo.png" />
-                        <div class="description">
-                            <h3>Diogo</h3>
+                        <div id="person-diogo" class="person" onclick="openPerson('diogo')">
+                            <img src="./img/team/diogo.png" />
+                            <div class="description">
+                                <h3>Diogo</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div id="person-pedro" class="person" onclick="openPerson('pedro')">
-                        <img src="./img/team/pedro.png" />
-                        <div class="description">
-                            <h3>Pedro</h3>
+                        <div id="person-pedro" class="person" onclick="openPerson('pedro')">
+                            <img src="./img/team/pedro.png" />
+                            <div class="description">
+                                <h3>Pedro</h3>
+                            </div>
                         </div>
                     </div>
                 </div>

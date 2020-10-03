@@ -30,7 +30,7 @@ body {
     text-align: center;
 }
 
-.background:nth-child(2n) {
+.background:nth-child(2n+1) {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -156,4 +156,80 @@ body {
 
 #footer {
     text-align: center;
+}
+
+#menu-open,
+#menu-close {
+    z-index: 3;
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 10%;
+    color: #000;
+    font-size: 20px;
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+
+    #page {
+        z-index: 1;
+    }
+
+    #header {
+        display: none;
+    }
+
+    #menu {
+        z-index: 2;
+        position: fixed;
+        width: 100%;
+        display: none;
+        padding-top: 40px;
+    }
+
+    #menu a {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 5px;
+        margin-left: 0;
+        margin-right: 0;
+        width: calc(100% - 20%);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #menu a:first-child {
+        border-top: none;
+    }
+
+    #menu-open {
+        display: block;
+    }
+
+    #welcome img {
+        width: 100%;
+    }
+
+    #welcome h2 {
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    #team .container {
+        overflow-x: auto;
+    }
+
+    #team #people {
+        width: 400%;
+        flex-wrap: nowrap;
+    }
 }
