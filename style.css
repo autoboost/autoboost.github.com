@@ -215,6 +215,10 @@ body {
         display: block;
     }
 
+    #welcome {
+        height: 100vh;
+    }
+
     #welcome img {
         width: 100%;
     }
