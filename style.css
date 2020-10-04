@@ -110,14 +110,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: calc(24% - 80px);
+    width: calc(24% - 40px);
     margin: 10px 0.5%;
-    padding: 20px 40px;
+    padding: 20px 20px;
     background-color: rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: #000;
     border-radius: 10px;
-    cursor: pointer;
     transition: background-color 0.5s;
 }
 
@@ -127,7 +126,7 @@ body {
 }
 
 #team #people .person img {
-    width: 50px;
+    width: 80px;
     border-radius: 50%;
 }
 
@@ -138,8 +137,63 @@ body {
 
 #team #people .person .description h3,
 #team #people .person .description p {
+    text-align: right;
+}
+
+#team #people .person .description h3 {
+    margin: 0 0 5px 0;
+}
+
+#team #people .person .description p {
     margin: 0;
-    padding: 0;
+}
+
+#team #people .person .social-links a {
+    text-decoration: none;
+    color: blue;
+    font-size: 15px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+#team #people .person .social-links a span {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.5s;
+}
+
+#team #people .person .social-links a:hover span {
+    opacity: 0.7;
+}
+
+#team #people .person .social-links a span:after {
+    content: "•";
+    font-size: 5px;
+    margin-left: 5px;
+}
+
+#team #people .person .social-links a:last-child {
+    margin-right: 0;
+}
+
+#team #people .person .social-links a:last-child span:after {
+    content: none;
+    font-size: 0;
+    margin-left: 0;
+}
+
+#team #people .person .individual-assignment {
+    margin: 10px 0 0 0 !important;
+}
+
+#team #people .person .individual-assignment a {
+    text-decoration: none;
+    color: blue;
+    transition: opacity 0.5s;
+}
+
+#team #people .person .individual-assignment a:hover {
+    opacity: 0.7;
 }
 
 #team .info {
@@ -242,12 +296,7 @@ body {
         text-align: center;
     }
 
-    #team .container {
-        overflow-x: auto;
-    }
-
-    #team #people {
-        width: 380%;
-        flex-wrap: nowrap;
+    #team #people .person {
+        width: 100%;
     }
 }

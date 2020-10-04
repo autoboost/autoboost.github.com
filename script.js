@@ -1,15 +1,23 @@
 let peopleInfo = {
     "afonso": {
-        "name": "Afonso Nascimento"
+        "name": "Afonso Nascimento",
+        "linkedin": "javascript:;",
+        "personalPage": undefined
     },
     "alexandre": {
-        "name": "Alexandre Correia"
+        "name": "Alexandre Correia",
+        "linkedin": "https://www.linkedin.com/in/4lexcorrei4/",
+        "personalPage": "https://bitsys.tech"
     },
     "diogo": {
-        "name": "Diogo Gomes"
+        "name": "Diogo Gomes",
+        "linkedin": "javascript:;",
+        "personalPage": undefined
     },
     "pedro": {
-        "name": "Pedro Ferreira"
+        "name": "Pedro Ferreira",
+        "linkedin": "javascript:;",
+        "personalPage": undefined
     }
 };
 let peopleIDs = Object.keys(peopleInfo);
