@@ -16,7 +16,7 @@
         <link rel="stylesheet" type="text/css" href="./style.css"/>
         <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
-        <script src="./script.js"></script>
+        <script src="script/index.js"></script>
     </head>
     <body>
         <div id="page">
@@ -30,7 +30,7 @@
                             alt="AutoBoost Logo"
                     />
                 </a>
-                <a
+                <!--<a
                         href="https://fct.unl.pt"
                         target="_blank"
                 >
@@ -39,7 +39,7 @@
                             src="./img/fct_logo.png"
                             alt="FCT Logo"
                     />
-                </a>
+                </a>-->
                 <ion-icon id="menu-open-close" name="menu" onclick="toggleMenu()"></ion-icon>
             </div>
             <div id="menu" class="section-sides">
@@ -96,7 +96,7 @@
                                                 (peopleInfo[person].personalPage ? "<a href='" + peopleInfo[person].personalPage + "' target='_blank'><span>Website</span></a>" : "") +
                                             "</p>" +
                                             "<p class='individual-assignment'>" +
-                                                "<a href='javascript:;'>Individual Assignment</a>" +
+                                                "<a href='./individual-assignment.html?person=" + person + "' target='_blank'>Individual Assignment</a>" +
                                             "</p>" +
                                         "</div>" +
                                     "</div>"
