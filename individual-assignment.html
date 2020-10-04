@@ -42,91 +42,60 @@
                             alt="AutoBoost Logo"
                     />
                 </a>
-                <a
-                        href="#good"
-                >
-                    Good Design Example
-                </a>
-                <a
-                        href="#bad"
-                >
-                    Bad Design Example
-                </a>
+                <script>
+                    document.write(
+                        "<a href='#" + person + "-good'>Good Design Example</a>"
+                    )
+                </script>
+                <script>
+                    document.write(
+                        "<a href='#" + person + "-bad'>Bad Design Example</a>"
+                    )
+                </script>
             </div>
             <div id="welcome" class="section background">
                 <h2><script>document.write(peopleInfo[person].name)</script></h2>
             </div>
             <!-- AFONSO -->
-            <script>
-                var sectionID = "good";
-                if (person !== peopleIDs[0])
-                    sectionID += "-" + peopleIDs[0];
-                document.write("<div id='" + sectionID + "' class='good section background'>")
-            </script>
-            Afonso Good
+            <div id="afonso-good" class="section background">
+                <h2 class="title">Afonso Good</h2>
             </div>
-            <script>
-                var sectionID = "bad";
-                if (person !== peopleIDs[0])
-                    sectionID += "-" + peopleIDs[0];
-                document.write("<div id='" + sectionID + "' class='bad section background'>")
-            </script>
-            Afonso Bad
+            <div id="afonso-bad" class="section background">
+                <h2 class="title">Afonso Bad</h2>
             </div>
             <!-- ALEXANDRE -->
-            <script>
-                var sectionID = "good";
-                if (person !== peopleIDs[1])
-                    sectionID += "-" + peopleIDs[1];
-                document.write("<div id='" + sectionID + "' class='good section background'>")
-            </script>
-            Alexandre Good
+            <div id="alexandre-good" class="section background">
+                <h2 class="title">Alexandre Good</h2>
             </div>
-            <script>
-                var sectionID = "bad";
-                if (person !== peopleIDs[1])
-                    sectionID += "-" + peopleIDs[1];
-                document.write("<div id='" + sectionID + "' class='bad section background'>")
-            </script>
-            Alexandre Bad
+            <div id="alexandre-bad" class="section background">
+                <h2 class="title">Alexandre Bad</h2>
             </div>
             <!-- DIOGO -->
-            <script>
-                var sectionID = "good";
-                if (person !== peopleIDs[2])
-                    sectionID += "-" + peopleIDs[2];
-                document.write("<div id='" + sectionID + "' class='good section background'>")
-            </script>
-            Diogo Good
+            <div id="diogo-good" class="section background">
+                <h2 class="title">Diogo Good</h2>
             </div>
-            <script>
-                var sectionID = "bad";
-                if (person !== peopleIDs[2])
-                    sectionID += "-" + peopleIDs[2];
-                document.write("<div id='" + sectionID + "' class='bad section background'>")
-            </script>
-            Diogo Bad
+            <div id="diogo-bad" class="section background">
+                <h2 class="title">Diogo Bad</h2>
             </div>
             <!-- PEDRO -->
-            <script>
-                var sectionID = "good";
-                if (person !== peopleIDs[3])
-                    sectionID += "-" + peopleIDs[3];
-                document.write("<div id='" + sectionID + "' class='good section background'>")
-            </script>
-            Pedro Good
+            <div id="pedro-good" class="section background">
+                <h2 class="title">Pedro Good</h2>
             </div>
-            <script>
-                var sectionID = "bad";
-                if (person !== peopleIDs[3])
-                    sectionID += "-" + peopleIDs[3];
-                document.write("<div id='" + sectionID + "' class='bad section background'>")
-            </script>
-            Pedro Bad
+            <div id="pedro-bad" class="section background">
+                <h2 class="title">Pedro Bad</h2>
             </div>
             <div id="footer" class="section background">
                 <script>document.write(new Date().getFullYear());</script> &copy; AutoBoost
             </div>
         </div>
+        <script>
+            Object.keys(peopleInfo).map(function (current_person) {
+                    if (person !== current_person) {
+                        $("#" + current_person + "-good").hide();
+                        $("#" + current_person + "-bad").hide();
+                    }
+                }
+            )
+        </script>
     </body>
 </html>
