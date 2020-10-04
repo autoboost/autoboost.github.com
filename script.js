@@ -11,7 +11,7 @@ let peopleInfo = {
     },
     "diogo": {
         "name": "Diogo Gomes",
-        "linkedin": "javascript:;",
+        "linkedin": "https://www.linkedin.com/in/diogo-gomes-ab706b163/",
         "personalPage": undefined
     },
     "pedro": {
