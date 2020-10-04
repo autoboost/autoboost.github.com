@@ -30,7 +30,7 @@ body {
     text-align: center;
 }
 
-.background:nth-child(2n+1) {
+.background:nth-child(2n) {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
