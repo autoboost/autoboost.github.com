@@ -16,6 +16,7 @@
         <link rel="stylesheet" type="text/css" href="./style.css"/>
         <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+        <script src="./script.js"></script>
     </head>
     <body>
         <div id="page">
@@ -81,65 +82,44 @@
                 <h2 class="title">Team</h2>
                 <div class="container">
                     <div id="people">
-                        <script>
-                            let peopleInfo = {
-                                "afonso": {
-                                    "name": "Afonso"
-                                },
-                                "alexandre": {
-                                    "name": "Alexandre"
-                                },
-                                "diogo": {
-                                    "name": "Diogo"
-                                },
-                                "pedro": {
-                                    "name": "Pedro"
-                                }
-                            };
-                            let peopleIDs = Object.keys(peopleInfo);
-                            let selectedPerson = undefined;
-
-                            function openPerson(id) {
-                                peopleIDs.map(person => $("#team #person-" + person).removeClass("active"));
-                                if (selectedPerson !== id) {
-                                    if (!selectedPerson)
-                                        $("#team #personInfo").show(500);
-                                    selectedPerson = id;
-                                    $("#team #person-" + id).addClass("active");
-
-                                    // set info
-                                    $("#team #personInfo #name").html(peopleInfo[id].name);
-                                }
-                            }
-
-                            function closePerson() {
-                                peopleIDs.map(person => $("#team #person-" + person).removeClass("active"));
-                                $("#team #personInfo").hide(500);
-                                selectedPerson = undefined;
-                            }
-                        </script>
                         <div id="person-afonso" class="person" onclick="openPerson('afonso')">
                             <img src="./img/team/afonso.png" />
                             <div class="description">
-                                <h3>Afonso</h3>
+                                <h3>
+                                    <script>
+                                        document.write(peopleInfo.afonso.name)
+                                    </script>
+                                </h3>
                             </div>
                         </div>
                         <div id="person-alexandre" class="person" onclick="openPerson('alexandre')">
                             <img src="./img/team/alexandre.png" />
                             <div class="description">
-                                <h3>Alexandre</h3>
+                                <h3>
+                                    <script>
+                                        document.write(peopleInfo.alexandre.name)
+                                    </script>
+                                </h3>
                             </div>
                         </div>
                         <div id="person-diogo" class="person" onclick="openPerson('diogo')">
                             <img src="./img/team/diogo.png" />
                             <div class="description">
-                                <h3>Diogo</h3>
+                                <h3>
+                                    <script>
+                                        document.write(peopleInfo.diogo.name)
+                                    </script>
+                                </h3>
                             </div>
                         </div>
                         <div id="person-pedro" class="person" onclick="openPerson('pedro')">
                             <img src="./img/team/pedro.png" />
                             <div class="description">
-                                <h3>Pedro</h3>
+                                <h3>
+                                    <script>
+                                        document.write(peopleInfo.pedro.name)
+                                    </script>
+                                </h3>
                             </div>
                         </div>
                     </div>
