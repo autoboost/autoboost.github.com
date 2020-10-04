@@ -54,35 +54,37 @@
                 </script>
             </div>
             <div id="welcome" class="section background">
-                <h2><script>document.write(peopleInfo[person].name)</script></h2>
+                <script>document.write("<img style='width: 200px; border-radius: 50%' src='./img/team/" + person + ".png' />")</script>
+                <h2><script>document.write(examplesNames[person].good)</script> <span style="font-weight: normal;">&</span> <script>document.write(examplesNames[person].bad)</script></h2>
+                <h3 style="margin-top: 0; font-weight: normal"><script>document.write(peopleInfo[person].name)</script></h3>
             </div>
             <!-- AFONSO -->
             <div id="afonso-good" class="section background">
-                <h2 class="title">Afonso Good</h2>
+                <h2 class="title"><script>document.write(examplesNames.afonso.good)</script></h2>
             </div>
             <div id="afonso-bad" class="section background">
-                <h2 class="title">Afonso Bad</h2>
+                <h2 class="title"><script>document.write(examplesNames.afonso.bad)</script></h2>
             </div>
             <!-- ALEXANDRE -->
             <div id="alexandre-good" class="section background">
-                <h2 class="title">Alexandre Good</h2>
+                <h2 class="title"><script>document.write(examplesNames.alexandre.good)</script></h2>
             </div>
             <div id="alexandre-bad" class="section background">
-                <h2 class="title">Alexandre Bad</h2>
+                <h2 class="title"><script>document.write(examplesNames.alexandre.bad)</script></h2>
             </div>
             <!-- DIOGO -->
             <div id="diogo-good" class="section background">
-                <h2 class="title">Diogo Good</h2>
+                <h2 class="title"><script>document.write(examplesNames.diogo.good)</script></h2>
             </div>
             <div id="diogo-bad" class="section background">
-                <h2 class="title">Diogo Bad</h2>
+                <h2 class="title"><script>document.write(examplesNames.diogo.bad)</script></h2>
             </div>
             <!-- PEDRO -->
             <div id="pedro-good" class="section background">
-                <h2 class="title">Pedro Good</h2>
+                <h2 class="title"><script>document.write(examplesNames.pedro.good)</script></h2>
             </div>
             <div id="pedro-bad" class="section background">
-                <h2 class="title">Pedro Bad</h2>
+                <h2 class="title"><script>document.write(examplesNames.pedro.bad)</script></h2>
             </div>
             <div id="footer" class="section background">
                 <script>document.write(new Date().getFullYear());</script> &copy; AutoBoost
