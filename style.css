@@ -158,13 +158,8 @@ body {
     text-align: center;
 }
 
-#menu-open,
-#menu-close {
-    z-index: 3;
+#menu-open-close {
     display: none;
-    position: fixed;
-    top: 20px;
-    right: 10%;
     color: #000;
     font-size: 20px;
 }
@@ -186,6 +181,19 @@ body {
     }
 
     #header {
+        width: calc(100% - 20%);
+        position: fixed;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #header #autoboost {
+        height: 25px;
+    }
+
+    #header #fct {
         display: none;
     }
 
@@ -204,14 +212,19 @@ body {
         margin-left: 0;
         margin-right: 0;
         width: calc(100% - 20%);
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #menu a:first-child,
+    #menu a:nth-child(2) {
+        border-bottom: none;
     }
 
     #menu a:first-child {
-        border-top: none;
+        display: none;
     }
 
-    #menu-open {
+    #menu-open-close {
         display: block;
     }
 
