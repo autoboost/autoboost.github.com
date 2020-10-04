@@ -256,6 +256,10 @@ body {
         justify-content: space-between;
     }
 
+    #header h2 {
+        margin: 0;
+    }
+
     #header #autoboost {
         height: 25px;
     }

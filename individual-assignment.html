@@ -22,9 +22,9 @@
     <body>
         <div id="page">
             <div id="header" class="section-sides">
-                <h1>
-                    <script>document.write(peopleInfo[person].name)</script>'s Individual Assignment
-                </h1>
+                <h2 style="text-overflow: ellipsis; overflow-x: hidden; white-space: nowrap">
+                    Individual Assignment
+                </h2>
                 <ion-icon id="menu-open-close" name="menu" onclick="toggleMenu()"></ion-icon>
             </div>
             <div id="menu" class="section-sides">
@@ -52,6 +52,9 @@
                 >
                     Bad Design Example
                 </a>
+            </div>
+            <div id="welcome" class="section background">
+                <h2><script>document.write(peopleInfo[person].name)</script></h2>
             </div>
             <!-- AFONSO -->
             <script>
