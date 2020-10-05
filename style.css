@@ -223,6 +223,40 @@ body {
     display: none;
 }
 
+/* INDIVIDUAL ASSIGNMENT */
+
+.individual-assignment-introduction p {
+    line-height: 25px;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+.individual-assignment-introduction ul {
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+}
+
+.individual-assignment-introduction ul li {
+    width: calc((100% / 5) - 2%);
+    padding: 0 1%;
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.individual-assignment-introduction ul li:last-child {
+    border-right: none;
+}
+
+.individual-assignment-introduction ul li span {
+    font-weight: bold;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 500px) {
     .desktop {
         display: none;
@@ -302,5 +336,19 @@ body {
 
     #team #people .person {
         width: 100%;
+    }
+
+    .individual-assignment-introduction ul {
+        flex-wrap: wrap;
+    }
+
+    .individual-assignment-introduction ul li {
+        width: 100%;
+        border-right: none;
+        margin-bottom: 20px;
+    }
+
+    .individual-assignment-introduction ul li:last-child {
+        margin-bottom: 0;
     }
 }
