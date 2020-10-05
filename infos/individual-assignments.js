@@ -1,6 +1,3 @@
-let urlParams = new URLSearchParams(window.location.search)
-let person = urlParams.get("person")
-
 let examplesNames = {
     "afonso": {
         "good": "Afonso Good",

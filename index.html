@@ -16,7 +16,10 @@
         <link rel="stylesheet" type="text/css" href="./style.css"/>
         <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
-        <script src="script/index.js"></script>
+        <script src="./script/common.js"></script>
+        <script src="./script/individual-assignments.js"></script>
+        <script src="./infos/people.js"></script>
+        <script src="./infos/individual-assignments.js"></script>
     </head>
     <body>
         <div id="page">
@@ -95,19 +98,15 @@
                                                 "<a href='" + peopleInfo[person].linkedin + "' target='_blank'><span>LinkedIn</span></a>" +
                                                 (peopleInfo[person].personalPage ? "<a href='" + peopleInfo[person].personalPage + "' target='_blank'><span>Website</span></a>" : "") +
                                             "</p>" +
-                                            "<p class='individual-assignment'>" +
+                                            "<!--<p class='individual-assignment'>" +
                                                 "<a href='./individual-assignment.html?person=" + person + "' target='_blank'>Individual Assignment</a>" +
-                                            "</p>" +
+                                            "</p>-->" +
                                         "</div>" +
                                     "</div>"
                                 )
                             )
                         </script>
                     </div>
-                </div>
-                <div id="personInfo" class="info section-up-bottom">
-                    <ion-icon name="close-circle" onclick="closePerson()"></ion-icon>
-                    <h3 id="name"></h3>
                 </div>
             </div>
             <div id="footer" class="section background">
