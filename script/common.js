@@ -22,13 +22,14 @@ function login() {
                 pass = tempPass;
                 logged = true;
                 $("#menu-login").html("Log Out&nbsp;<ion-icon name='lock-open'></ion-icon>");
+                if (window.matchMedia("(max-width: 975px)").matches)
+                    toggleMenu();
             }
         }
     } else {
         $("#menu-login").html("Log In&nbsp;<ion-icon name='lock-closed'></ion-icon>");
         logged = false;
     }
-    toggleMenu();
 }
 
 function openURL(url, target) {
