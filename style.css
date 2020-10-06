@@ -56,17 +56,24 @@ body {
 }
 
 #menu {
-    position: sticky;
+    position: fixed;
+    width: calc(100% - 20%);
     top: 0;
     margin: 0;
     border-bottom: 2px solid gray;
     display: flex;
-    align-items: center;
+    align-items: stretch;
+    justify-content: space-between;
     background-color: rgb(240, 240, 240);
     z-index: 2;
 }
 
-#menu a {
+#menu #menu-links {
+    display: flex;
+    align-items: center;
+}
+
+#menu #menu-links a {
     padding: 7px 10px 5px 10px;
     margin-left: 7px;
     font-size: 20px;
@@ -77,11 +84,11 @@ body {
     transition: background-color 0.5s;
 }
 
-#menu a:hover {
+#menu #menu-links a:hover {
     background-color: rgb(255, 255, 255);
 }
 
-#menu a:first-child {
+#menu #menu-links a:first-child {
     background-color: rgba(255, 255, 255, 0);
     padding-right: 0;
     padding-left: 0;
@@ -89,12 +96,25 @@ body {
     margin-right: 7px;
 }
 
-#menu img {
+#menu #menu-links img {
     height: 20px;
 }
 
+#menu #menu-login {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 10px;
+    margin: 0;
+    transition: background-color 0.5s;
+}
+
+#menu #menu-login:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 #welcome {
-    height: calc(100vh - 82px);
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -117,49 +137,89 @@ body {
     z-index: 1;
 }
 
-#project .container {
-    display: flex;
-    align-items: center;
-}
-
-#project .container #identity,
-#project .container #docs {
-    text-align: center;
-}
-
-#project .container #identity {
-    width: 30%;
+#projects .project {
+    width: calc(100% - 20px);
     border-radius: 10px;
     transition: background-color 0.5s;
     padding: 10px;
+    margin: 10px 0 0 0;
     text-decoration: none;
-    color: #3491ce;
-}
-
-#project .container #identity:hover {
+    display: flex;
+    align-items: stretch;
+    text-align: center;
     background-color: rgba(0, 0, 150, 0.1);
 }
 
-#project .container #identity img {
+#projects .project:nth-child(2n + 1) {
+    flex-direction: row;
+}
+
+#projects .project:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+#projects .project div:first-child {
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+#projects .project #identity {
     width: 100%;
     border-radius: 10px;
 }
 
-#project .container #identity h3 {
-    margin-bottom: 0;
-}
-
-#project .container #docs {
+#projects .project:nth-child(2n + 1) #description {
     width: 70%;
+    padding: 10px 10px 0 40px;
 }
 
-#project .container #identity a {
+#projects .project:nth-child(2n) #description {
+    width: 70%;
+    padding: 10px 40px 10px 10px;
+}
+
+#projects .project #description h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#projects .project #description h3 a {
+    color: #000;
+    transition: color 0.5s;
+}
+
+#projects .project #description h3 a:hover {
+    color: blue;
+}
+
+#projects .project #description p,
+#projects .project #description ul {
+    text-align: justify;
+    color: #555;
+}
+
+#projects .project #description .individual-assignments-links {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+#projects .project #description .individual-assignments-links li {
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+#projects .project #description .individual-assignments-links a {
     text-decoration: none;
-    color: #3491ce;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: #000;
+    transition: color 0.5s;
 }
 
-#project .container #identity h3 {
-    margin-top: 10px;
+#projects .project #description .individual-assignments-links a:hover {
+    color: #555;
 }
 
 #team #people {
@@ -295,7 +355,7 @@ body {
     margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 975px) {
     .desktop {
         display: none;
     }
@@ -336,7 +396,11 @@ body {
         padding-top: 40px;
     }
 
-    #menu a {
+    #menu #menu-links {
+        display: block;
+    }
+
+    #menu #menu-links a {
         padding-left: 0;
         padding-right: 0;
         margin-top: 5px;
@@ -346,12 +410,21 @@ body {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    #menu a:last-child {
+    #menu #menu-links a:last-child {
         border-bottom: none;
     }
 
-    #menu a:first-child {
+    #menu #menu-links a:first-child {
         display: none;
+    }
+
+    #menu #menu-login {
+        width: calc(100% - 20%);
+        margin-top: 40px;
+        padding: 10px 0;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
     }
 
     #menu-open-close {
@@ -369,6 +442,28 @@ body {
 
     #welcome h2 {
         padding-top: 20px;
+        text-align: center;
+    }
+
+    #projects .project:nth-child(2n + 1),
+    #projects .project:nth-child(2n) {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    #projects .project:nth-child(2n + 1) div:first-child,
+    #projects .project:nth-child(2n) div:first-child {
+        width: 100%;
+    }
+
+    #projects .project:nth-child(2n + 1) #description,
+    #projects .project:nth-child(2n) #description {
+        width: calc(100% - 20px);
+        padding: 20px 10px 10px 10px;
+    }
+
+    #projects .project:nth-child(2n + 1) #description h3,
+    #projects .project:nth-child(2n) #description h3 {
         text-align: center;
     }
 

@@ -23,54 +23,50 @@
     </head>
     <body>
         <div id="page">
-            <!--<div id="header" class="section-sides">
-                <a
-                    href="./"
-                >
-                    <img
-                            id="autoboost"
-                            src="./img/logo_long_transparent.png"
-                            alt="AutoBoost Logo"
-                    />
-                </a>
-                <ion-icon id="menu-open-close" name="menu" onclick="toggleMenu()"></ion-icon>
-            </div>-->
             <ion-icon id="menu-open-close" name="menu" onclick="toggleMenu()"></ion-icon>
             <div id="menu" class="section-sides">
-                <a
-                        href="./"
-                >
-                    <img
-                            class="desktop"
-                            src="./img/logo_transparent.png"
-                            alt="AutoBoost Logo"
-                    />
-                    <img
-                            class="mobile"
-                            src="./img/logo_long_transparent.png"
-                            alt="AutoBoost Logo"
-                    />
-                </a>
-                <a
-                        href="#about-us"
-                >
-                    About Us
-                </a>
-                <a
-                        href="#individual-assignments"
-                >
-                    Individual Assignments
-                </a>
-                <a
-                        href="#project"
-                >
-                    Project
-                </a>
-                <a
-                        href="#team"
-                >
-                    Team
-                </a>
+                <div id="menu-links">
+                    <a
+                            href="./"
+                    >
+                        <img
+                                class="desktop"
+                                src="./img/logo_transparent.png"
+                                alt="AutoBoost Logo"
+                        />
+                        <img
+                                class="mobile"
+                                src="./img/logo_long_transparent.png"
+                                alt="AutoBoost Logo"
+                        />
+                    </a>
+                    <a
+                            href="#about-us"
+                            onclick="toggleMenu()"
+                    >
+                        About Us
+                    </a>
+                    <a
+                            href="#projects"
+                            onclick="toggleMenu()"
+                    >
+                        Projects
+                    </a>
+                    <a
+                            href="#team"
+                            onclick="toggleMenu()"
+                    >
+                        Team
+                    </a>
+                </div>
+                <script>
+                    if (!logged)
+                        document.write(
+                            "<div id='menu-login' onclick='login()'>" +
+                                "Login&nbsp;<ion-icon name='lock-closed'></ion-icon>" +
+                            "</div>"
+                        )
+                </script>
             </div>
             <div id="welcome" class="section background">
                 <img
@@ -86,20 +82,49 @@
             <div id="about-us" class="section background">
                 <h2 class="title">About Us</h2>
             </div>
-            <div id="individual-assignments" class="section background">
-                <h2 class="title">Individual Assignments</h2>
-            </div>
-            <div id="project" class="section background">
-                <h2 class="title">Project</h2>
-                <div class="container">
-                    <a id="identity" href="https://samucar.pt" target="_blank">
+            <div id="projects" class="section background">
+                <h2 class="title">Projects</h2>
+                <div class="projects">
+                    <div class="project">
                         <div>
-                            <img src="./img/samucar.png" alt="Samucar Logo" />
-                            <h3>Samucar</h3>
+                            <img id="identity" src="./img/samucar.png" alt="Samucar Logo" />
                         </div>
-                    </a>
-                    <div id="docs">
-
+                        <div id="description">
+                            <h3>
+                                <a
+                                        href="javascript:;"
+                                        onclick="openURL('https://samucar.pt', '_blank')"
+                                        title="Samucar | Stand Automovel Almada"
+                                >
+                                    Samucar's Website
+                                </a>
+                            </h3>
+                            <p>Description here</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div>
+                            <img id="identity" src="./img/ipm.png" alt="IPM Logo" />
+                        </div>
+                        <div id="description">
+                            <h3>
+                                <a
+                                        href="javascript:;"
+                                        title="IPM Individual Assignments"
+                                >
+                                    IPM Individual Assignments
+                                </a>
+                            </h3>
+                            <ul class="individual-assignments-links">
+                                <script>
+                                    Object.keys(peopleInfo).map(person =>
+                                        document.write(
+                                            "<li>" + peopleInfo[person].name + "<a href='javascript:;' onclick=\"openURL('" + peopleInfo[person].individualAssignment + "', '_blank')\"><ion-icon name='document'></ion-icon></a></li>"
+                                        )
+                                    )
+                                </script>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
