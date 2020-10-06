@@ -93,11 +93,60 @@ body {
 }
 
 #welcome {
-    height: calc(100vh - 172px);
+    height: calc(100vh - 82px);
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    background-image: linear-gradient(rgba(255,255,255,.8),rgba(255,255,255,.8)),url('./img/code.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+
+#project .container {
+    display: flex;
+    align-items: center;
+}
+
+#project .container #identity,
+#project .container #docs {
+    text-align: center;
+}
+
+#project .container #identity {
+    width: 30%;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+    padding: 10px;
+    text-decoration: none;
+    color: #3491ce;
+}
+
+#project .container #identity:hover {
+    background-color: rgba(0, 0, 150, 0.1);
+}
+
+#project .container #identity img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#project .container #identity h3 {
+    margin-bottom: 0;
+}
+
+#project .container #docs {
+    width: 70%;
+}
+
+#project .container #identity a {
+    text-decoration: none;
+    color: #3491ce;
+}
+
+#project .container #identity h3 {
+    margin-top: 10px;
 }
 
 #team #people {
@@ -182,41 +231,18 @@ body {
     margin-left: 0;
 }
 
-#team #people .person .individual-assignment {
-    margin: 10px 0 0 0 !important;
-}
-
-#team #people .person .individual-assignment a {
-    text-decoration: none;
-    color: blue;
-    transition: opacity 0.5s;
-}
-
-#team #people .person .individual-assignment a:hover {
-    opacity: 0.7;
-}
-
-#team .info {
-    display: none;
-    width: calc(100% - 2%);
-    padding: 0 1%;
-}
-
-#team .info ion-icon {
-    position: absolute;
-    right: calc(10% + 0.5%);
-    font-size: 30px;
-    cursor: pointer;
-}
-
 #footer {
     text-align: center;
 }
 
 #menu-open-close {
     display: none;
+    position: fixed;
     color: #000;
     font-size: 20px;
+    top: 10px;
+    right: 10%;
+    z-index: 3;
 }
 
 .mobile {
@@ -308,8 +334,7 @@ body {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    #menu a:first-child,
-    #menu a:nth-child(2) {
+    #menu a:last-child {
         border-bottom: none;
     }
 

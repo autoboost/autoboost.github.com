@@ -16,7 +16,7 @@ let peopleInfo = {
     },
     "pedro": {
         "name": "Pedro Ferreira",
-        "linkedin": "javascript:;",
+        "linkedin": "https://www.linkedin.com/in/pedro-ferreira-59baa3116/",
         "personalPage": undefined
     }
 };

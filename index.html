@@ -23,7 +23,7 @@
     </head>
     <body>
         <div id="page">
-            <div id="header" class="section-sides">
+            <!--<div id="header" class="section-sides">
                 <a
                     href="./"
                 >
@@ -33,18 +33,9 @@
                             alt="AutoBoost Logo"
                     />
                 </a>
-                <!--<a
-                        href="https://fct.unl.pt"
-                        target="_blank"
-                >
-                    <img
-                            id="fct"
-                            src="./img/fct_logo.png"
-                            alt="FCT Logo"
-                    />
-                </a>-->
                 <ion-icon id="menu-open-close" name="menu" onclick="toggleMenu()"></ion-icon>
-            </div>
+            </div>-->
+            <ion-icon id="menu-open-close" name="menu" onclick="toggleMenu()"></ion-icon>
             <div id="menu" class="section-sides">
                 <a
                         href="./"
@@ -59,6 +50,16 @@
                             src="./img/logo_long_transparent.png"
                             alt="AutoBoost Logo"
                     />
+                </a>
+                <a
+                        href="#about-us"
+                >
+                    About Us
+                </a>
+                <a
+                        href="#individual-assignments"
+                >
+                    Individual Assignments
                 </a>
                 <a
                         href="#project"
@@ -76,10 +77,27 @@
                         src="./img/logo_long_transparent.png"
                         alt="AutoBoost Logo"
                 />
-                <h2>Welcome to AutoBoost!</h2>
+                <h2>Welcome!</h2>
+            </div>
+            <div id="about-us" class="section background">
+                <h2 class="title">About Us</h2>
+            </div>
+            <div id="individual-assignments" class="section background">
+                <h2 class="title">Individual Assignments</h2>
             </div>
             <div id="project" class="section background">
                 <h2 class="title">Project</h2>
+                <div class="container">
+                    <a id="identity" href="https://samucar.pt" target="_blank">
+                        <div>
+                            <img src="./img/samucar.png" alt="Samucar Logo" />
+                            <h3>Samucar</h3>
+                        </div>
+                    </a>
+                    <div id="docs">
+
+                    </div>
+                </div>
             </div>
             <div id="team" class="section background">
                 <h2 class="title">Team</h2>
@@ -98,9 +116,6 @@
                                                 "<a href='" + peopleInfo[person].linkedin + "' target='_blank'><span>LinkedIn</span></a>" +
                                                 (peopleInfo[person].personalPage ? "<a href='" + peopleInfo[person].personalPage + "' target='_blank'><span>Website</span></a>" : "") +
                                             "</p>" +
-                                            "<!--<p class='individual-assignment'>" +
-                                                "<a href='./individual-assignment.html?person=" + person + "' target='_blank'>Individual Assignment</a>" +
-                                            "</p>-->" +
                                         "</div>" +
                                     "</div>"
                                 )
