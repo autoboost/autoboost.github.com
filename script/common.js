@@ -14,7 +14,7 @@ function login() {
         while (pass === undefined) {
             let tempPass = prompt("Enter the password");
             if (tempPass === null) {
-                logged = false;
+                logged = falsonclick="toggleMenu()"e;
                 pass = "";
             } else if (tempPass != "ipm2020")
                 alert("Wrong password, please try again");
@@ -28,6 +28,7 @@ function login() {
         $("#menu-login").html("Log In&nbsp;<ion-icon name='lock-closed'></ion-icon>");
         logged = false;
     }
+    toggleMenu();
 }
 
 function openURL(url, target) {
