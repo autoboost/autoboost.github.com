@@ -14,7 +14,7 @@ function login() {
         while (pass === undefined) {
             let tempPass = prompt("Enter the password");
             if (tempPass === null) {
-                logged = falsonclick="toggleMenu()"e;
+                logged = false;
                 pass = "";
             } else if (tempPass != "ipm2020")
                 alert("Wrong password, please try again");
