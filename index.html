@@ -59,14 +59,6 @@
                         Team
                     </a>
                 </div>
-                <script>
-                    if (!logged)
-                        document.write(
-                            "<div id='menu-login' onclick='login()'>" +
-                                "Login&nbsp;<ion-icon name='lock-closed'></ion-icon>" +
-                            "</div>"
-                        )
-                </script>
             </div>
             <div id="welcome" class="section background">
                 <img
@@ -92,8 +84,8 @@
                         <div id="description">
                             <h3>
                                 <a
-                                        href="javascript:;"
-                                        onclick="openURL('https://samucar.pt', '_blank')"
+                                        href="https://samucar.pt"
+                                        target="_blank"
                                         title="Samucar | Stand Automovel Almada"
                                 >
                                     Samucar's Website
@@ -107,19 +99,15 @@
                             <img id="identity" src="./img/ipm.png" alt="IPM Logo" />
                         </div>
                         <div id="description">
-                            <h3>
-                                <a
-                                        href="javascript:;"
-                                        title="IPM Individual Assignments"
-                                >
-                                    IPM Individual Assignments
-                                </a>
+                            <h3
+                                    title="IPM Individual Assignments">
+                                IPM Individual Assignments
                             </h3>
                             <ul class="individual-assignments-links">
                                 <script>
                                     Object.keys(peopleInfo).map(person =>
                                         document.write(
-                                            "<li>" + peopleInfo[person].name + "<a href='javascript:;' onclick=\"openURL('" + peopleInfo[person].individualAssignment + "', '_blank')\"><ion-icon name='document'></ion-icon></a></li>"
+                                            "<li>" + peopleInfo[person].name + "<a href='" + peopleInfo[person].individualAssignment + "' target='_blank'><ion-icon name='document'></ion-icon></a></li>"
                                         )
                                     )
                                 </script>

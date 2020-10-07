@@ -3,7 +3,7 @@ let peopleInfo = {
         "name": "Afonso Nascimento",
         "linkedin": "http://www.linkedin.com/in/afonso-nascimento-3407ba1b6/",
         "personalPage": undefined,
-        "individualAssignment": "javascript:;"
+        "individualAssignment": "./individual-assignments/afonso-nascimento-53193.pdf"
     },
     "alexandre": {
         "name": "Alexandre Correia",
@@ -15,7 +15,7 @@ let peopleInfo = {
         "name": "Diogo Gomes",
         "linkedin": "https://www.linkedin.com/in/diogo-gomes-ab706b163/",
         "personalPage": undefined,
-        "individualAssignment": "javascript:;"
+        "individualAssignment": "./individual-assignments/diogo-gomes-52281.pdf"
     },
     "pedro": {
         "name": "Pedro Ferreira",

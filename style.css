@@ -183,6 +183,7 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     text-align: left;
+    text-decoration: underline;
 }
 
 #projects .project #description h3 a {
