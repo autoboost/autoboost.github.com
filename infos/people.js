@@ -9,7 +9,7 @@ let peopleInfo = {
         "name": "Alexandre Correia",
         "linkedin": "https://www.linkedin.com/in/4lexcorrei4/",
         "personalPage": "https://bitsys.tech",
-        "individualAssignment": "javascript:;"
+        "individualAssignment": "./individual-assignments/alexandre-correia-53298.pdf"
     },
     "diogo": {
         "name": "Diogo Gomes",
