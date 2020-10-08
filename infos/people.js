@@ -21,6 +21,6 @@ let peopleInfo = {
         "name": "Pedro Ferreira",
         "linkedin": "https://www.linkedin.com/in/pedro-ferreira-59baa3116/",
         "personalPage": undefined,
-        "individualAssignment": "javascript:;"
+        "individualAssignment": "./individual-assignments/pedro-ferreira-52370.pdf"
     }
 };
