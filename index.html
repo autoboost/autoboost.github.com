@@ -18,6 +18,7 @@
         <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
         <script src="./script/common.js"></script>
         <script src="./infos/people.js"></script>
+        <script src="./infos/final-project.js"></script>
     </head>
     <body>
         <div id="page">
@@ -103,16 +104,32 @@
                                     title="IPM (Human-Computer Interaction)">
                                 IPM (Human-Computer Interaction)
                             </h3>
-                            <h4>Individual Assignments <span>(08/10/2020)</span></h4>
-                            <ul class="individual-assignments-links">
-                                <script>
-                                    Object.keys(peopleInfo).map(person =>
-                                        document.write(
-                                            "<li><a href='" + peopleInfo[person].individualAssignment + "' target='_blank'>" + peopleInfo[person].name + "<ion-icon name='document'></ion-icon></a></li>"
+                            <div class="deliver">
+                                <h4><span class="name">Final Project</span></h4>
+                                <div class="final-project">
+                                    <script>
+                                        Object.keys(finalProjectStages).map(stage =>
+                                            document.write(
+                                                "<a href='" + finalProjectStages[stage].url + "'>" +
+                                                    "<span class=\"name\">Stage " + stage + "</span><span class=\"details\">" + finalProjectStages[stage].date + " - " + finalProjectStages[stage].title + "</span>\n" +
+                                                "</a>"
+                                            )
                                         )
-                                    )
-                                </script>
-                            </ul>
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="deliver">
+                                <h4><span class="name">Individual Assignments</span><span class="details">08/10/2020 - Good and Bad Design</span></h4>
+                                <ul class="individual-assignments-links">
+                                    <script>
+                                        Object.keys(peopleInfo).map(person =>
+                                            document.write(
+                                                "<li><a href='" + peopleInfo[person].individualAssignment + "' target='_blank'>" + peopleInfo[person].name + "<ion-icon name='document'></ion-icon></a></li>"
+                                            )
+                                        )
+                                    </script>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

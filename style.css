@@ -186,12 +186,12 @@ body {
 #projects .project #description h3,
 #projects .project #description h4 {
     text-align: left;
-    text-decoration: underline;
     margin-bottom: 0;
 }
 
 #projects .project #description h3 {
     margin-top: 0;
+    text-decoration: underline;
 }
 
 #projects .project #description h3 a {
@@ -233,6 +233,32 @@ body {
 
 #projects .project #description .individual-assignments-links a ion-icon {
     margin-left: 5px;
+}
+
+#projects .project #description .final-project {
+    margin: 0;
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+#projects .project #description .final-project a {
+    text-decoration: none;
+    color: #000;
+}
+
+#projects .project #description .final-project .details {
+    margin-bottom: 10px;
+}
+
+#projects .project #description .deliver .name {
+    display: block;
+    font-weight: bold;
+}
+
+#projects .project #description .deliver .details {
+    display: block;
+    font-weight: normal;
+    font-size: 15px;
 }
 
 #team #people {
@@ -332,40 +358,6 @@ body {
 
 .mobile {
     display: none;
-}
-
-/* INDIVIDUAL ASSIGNMENT */
-
-.individual-assignment-introduction p {
-    line-height: 25px;
-    margin-bottom: 5px;
-    text-align: justify;
-}
-
-.individual-assignment-introduction ul {
-    margin: 10px 0 0 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    align-items: stretch;
-}
-
-.individual-assignment-introduction ul li {
-    width: calc((100% / 5) - 2%);
-    padding: 0 1%;
-    text-align: center;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.individual-assignment-introduction ul li:last-child {
-    border-right: none;
-}
-
-.individual-assignment-introduction ul li span {
-    font-weight: bold;
-    display: block;
-    font-size: 18px;
-    margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 975px) {
