@@ -137,6 +137,10 @@ body {
     z-index: 1;
 }
 
+#about-us p {
+    text-align: justify;
+}
+
 #projects .project {
     width: calc(100% - 20px);
     border-radius: 10px;
