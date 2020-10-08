@@ -100,14 +100,15 @@
                         </div>
                         <div id="description">
                             <h3
-                                    title="IPM Individual Assignments">
-                                IPM Individual Assignments
+                                    title="IPM (Human-Computer Interaction)">
+                                IPM (Human-Computer Interaction)
                             </h3>
+                            <h4>Individual Assignments <span>(08/10/2020)</span></h4>
                             <ul class="individual-assignments-links">
                                 <script>
                                     Object.keys(peopleInfo).map(person =>
                                         document.write(
-                                            "<li>" + peopleInfo[person].name + "<a href='" + peopleInfo[person].individualAssignment + "' target='_blank'><ion-icon name='document'></ion-icon></a></li>"
+                                            "<li><a href='" + peopleInfo[person].individualAssignment + "' target='_blank'>" + peopleInfo[person].name + "<ion-icon name='document'></ion-icon></a></li>"
                                         )
                                     )
                                 </script>

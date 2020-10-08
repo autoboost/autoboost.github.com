@@ -183,11 +183,15 @@ body {
     padding: 10px 40px 10px 10px;
 }
 
-#projects .project #description h3 {
-    margin-top: 0;
-    margin-bottom: 0;
+#projects .project #description h3,
+#projects .project #description h4 {
     text-align: left;
     text-decoration: underline;
+    margin-bottom: 0;
+}
+
+#projects .project #description h3 {
+    margin-top: 0;
 }
 
 #projects .project #description h3 a {
@@ -217,14 +221,18 @@ body {
 
 #projects .project #description .individual-assignments-links a {
     text-decoration: none;
-    margin-left: 5px;
-    vertical-align: middle;
     color: #000;
     transition: color 0.5s;
+    display: flex;
+    align-items: center;
 }
 
 #projects .project #description .individual-assignments-links a:hover {
     color: #555;
+}
+
+#projects .project #description .individual-assignments-links a ion-icon {
+    margin-left: 5px;
 }
 
 #team #people {
@@ -468,12 +476,18 @@ body {
     }
 
     #projects .project:nth-child(2n + 1) #description h3,
-    #projects .project:nth-child(2n) #description h3 {
+    #projects .project:nth-child(2n) #description h3,
+    #projects .project:nth-child(2n + 1) #description h4,
+    #projects .project:nth-child(2n) #description h4 {
         text-align: center;
     }
 
     #team #people .person {
         width: 100%;
+    }
+
+    #projects .project #description h4 span {
+        display: block;
     }
 
     .individual-assignment-introduction ul {
