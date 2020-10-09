@@ -209,45 +209,26 @@ body {
     color: #555;
 }
 
-#projects .project #description .individual-assignments-links {
-    margin: 0;
-    padding: 10px 20px;
-}
-
-#projects .project #description .individual-assignments-links li {
-    vertical-align: middle;
-    line-height: 30px;
-}
-
-#projects .project #description .individual-assignments-links a {
-    text-decoration: none;
-    color: #000;
-    transition: color 0.5s;
-    display: flex;
-    align-items: center;
-}
-
-#projects .project #description .individual-assignments-links a:hover {
-    color: #555;
-}
-
-#projects .project #description .individual-assignments-links a ion-icon {
-    margin-left: 5px;
-}
-
 #projects .project #description .final-project {
     margin: 0;
     padding: 10px 20px;
     text-align: justify;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
 #projects .project #description .final-project a {
     text-decoration: none;
     color: #000;
+    width: calc(50% - 20px);
+    border-radius: 20px;
+    padding: 10px;
+    transition: background-color 0.5s;
 }
 
-#projects .project #description .final-project .details {
-    margin-bottom: 10px;
+#projects .project #description .final-project a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 #projects .project #description .deliver .name {
@@ -259,6 +240,44 @@ body {
     display: block;
     font-weight: normal;
     font-size: 15px;
+}
+
+#projects .project #description .individual-assignments-links {
+    margin: 0;
+    padding: 10px 20px;
+    display: flex;
+    align-items: stretch;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+#projects .project #description .individual-assignments-links li {
+    width: 25%;
+}
+
+#projects .project #description .individual-assignments-links li:last-child {
+    border-right: none;
+}
+
+#projects .project #description .individual-assignments-links a {
+    margin: 0 5%;
+    width: calc(90% - 20px);
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+#projects .project #description .individual-assignments-links a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#projects .project #description .individual-assignments-links a ion-icon {
+    margin-left: 5px;
 }
 
 #team #people {
@@ -450,6 +469,15 @@ body {
         text-align: center;
     }
 
+    #projects .project #description .final-project {
+        padding: 10px 0 0 0;
+        text-align: left;
+    }
+
+    #projects .project #description .final-project a {
+        width: calc(100% - 20px);
+    }
+
     #projects .project:nth-child(2n + 1),
     #projects .project:nth-child(2n) {
         flex-direction: column;
@@ -474,25 +502,25 @@ body {
         text-align: center;
     }
 
+    #projects .project #description .individual-assignments-links {
+        padding: 10px 0 0 0;
+    }
+
+    #projects .project #description .individual-assignments-links li {
+        width: 100%;
+        border-right: none;
+    }
+
+    #projects .project #description .individual-assignments-links a {
+        margin: 0;
+        width: calc(100% - 20px);
+    }
+
     #team #people .person {
         width: 100%;
     }
 
     #projects .project #description h4 span {
         display: block;
-    }
-
-    .individual-assignment-introduction ul {
-        flex-wrap: wrap;
-    }
-
-    .individual-assignment-introduction ul li {
-        width: 100%;
-        border-right: none;
-        margin-bottom: 20px;
-    }
-
-    .individual-assignment-introduction ul li:last-child {
-        margin-bottom: 0;
     }
 }
