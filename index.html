@@ -115,7 +115,7 @@
                                     <script>
                                         Object.keys(finalProjectStages).map(stage =>
                                             document.write(
-                                                "<a href='" + finalProjectStages[stage].url + "'>" +
+                                                "<a href='" + finalProjectStages[stage].url + "'" + (finalProjectStages[stage].url != "javascript:;" ? " target='_blank'" : "") + ">" +
                                                     "<span class=\"name\">Stage " + stage + "</span><span class=\"details\">" + finalProjectStages[stage].date + " - " + finalProjectStages[stage].title + "</span>\n" +
                                                 "</a>"
                                             )
