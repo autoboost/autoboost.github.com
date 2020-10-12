@@ -2,7 +2,7 @@ let finalProjectStages = {
     "01": {
         "date": "12/10/2020",
         "title": "Project Proposal",
-        "url": "javascript:;"
+        "url": "./ipm/final-project/01-project-proposal.pdf"
     },
     "02": {
         "date": "19/10/2020",
