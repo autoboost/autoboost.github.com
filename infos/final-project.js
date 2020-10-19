@@ -7,7 +7,7 @@ let finalProjectStages = {
     "02": {
         "date": "19/10/2020",
         "title": "User and Task analysis",
-        "url": "./ipm/final-project/02-user_and_task_analysis.pdf"
+        "url": "./ipm/final-project/02-user-and-task-analysis.pdf"
     },
     "03": {
         "date": "??/??/2020",
