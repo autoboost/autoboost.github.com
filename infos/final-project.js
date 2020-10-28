@@ -10,12 +10,12 @@ let finalProjectStages = {
         "url": "./ipm/final-project/02-user-and-task-analysis.pdf"
     },
     "03": {
-        "date": "??/??/2020",
+        "date": "01/11/2020",
         "title": "1st prototype",
         "url": "javascript:;"
     },
     "04": {
-        "date": "??/??/2020",
+        "date": "27/11/2020",
         "title": "Computational prototype",
         "url": "javascript:;"
     },
