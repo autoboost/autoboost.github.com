@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IPM Prototype - AutoBoost</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" /><link ref="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./style.css"/>
+        <link property="og:image" rel="shorcut icon" href="../../img/logo.png" />
+        <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Lato', sans-serif;
+            }
+
+            #page {
+                width: 100%;
+                height: 100vh;
+            }
+
+            #sidebar {
+                position: fixed;
+                left: -500px;
+                top: 0;
+                width: 520px;
+                height: 100vh;
+                z-index: 10;
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+
+            #sidebar.open {
+                left: 0;
+            }
+
+            #sidebar ion-icon {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 20px;
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+
+            #sidebar #content {
+                width: calc(500px - 20px);
+                height: calc(100vh - 20px);
+                padding: 10px;
+                overflow-y: auto;
+                text-align: justify;
+            }
+
+            iframe {
+                position: fixed;
+                left: 20px;
+                top: 0;
+                border: 0;
+                width: calc(100% - 20px);
+                height: 100vh;
+            }
+        </style>
+        <script>
+            function openCloseDescription() {
+                if (!$("#sidebar").hasClass("open")) {
+                    $("#sidebar").addClass("open")
+                    $("#sidebar ion-icon").attr("name", "chevron-back")
+                } else {
+                    $("#sidebar").removeClass("open")
+                    $("#sidebar ion-icon").attr("name", "chevron-forward")
+                }
+            }
+        </script>
+        <div id="page">
+            <div id="sidebar">
+                <ion-icon name="chevron-forward" onclick="openCloseDescription()"></ion-icon>
+                <div id="content">
+                    <h3>About Samucar</h3>
+                    <p>
+                        Samucar is focused on the purchase, sale and mediation of vehicles in the automotive
+                        industry, offering reliable services with quality and pricing at the best level of
+                        the market!
+                    </p>
+                    <hr />
+                    <hr />
+                    <h3>Scenario 1 - Veronica needs to buy a vehicle</h3>
+                    <p>
+                        Veronica’s son (Alberto) is turning 18 the next month and she wants to surprise
+                        him with a new car. Veronica knows that Alberto has always loved Audi’s, so
+                        she decides to check Samucar’s website and search for an Audi with a price
+                        between 20.000€ and 50.000€.<br>
+                        She then chooses the cheapest Audi with the mandatory features that she is
+                        looking for.<br>
+                        After analysing the car’s specifications she decides to simulate a credit with a
+                        24 months period and an initial amount of 10 000€ to pay for it.<br>
+                        She feels happy and contacts Samucar’s team to finish the details and arrange
+                        a pick up to bring the car in time for her son’s birthday.
+                    </p>
+                    <hr />
+                    <h3>Scenario 2 - Mary would like to retake her car by a new one</h3>
+                    <p>
+                        Mary’s car is starting to have some issues and she is willing to retake it by a
+                        new one.<br>
+                        She starts looking for one that fits her needs and after a short period of time
+                        she falls in love with a Fiat Punto. She fills the various infos needed to retake
+                        her car (such as: the brand, model and distance driven as well as her contacts)
+                        and submits the proposal for the Samucar team to check it and get in contact
+                        with her.
+                    </p>
+                    <hr />
+                    <h3>Scenario 3 - Connie is willing to buy a SUV, but she is undecided</h3>
+                    <p>
+                        Connie wants to buy a SUV, but she’s divided between two cars that fits her
+                        budget.<br>
+                        To simplify her decision she makes use of the Samucar’s vehicle comparison
+                        feature to get all the details and differences between them.<br>
+                        The first car has better horsepower and less mileage than the second one, but
+                        the last one has more seats and trunk space, which she highly values because
+                        she has 4 children.<br>
+                        The decision is taken and she finally contacts the stand to finish the purchase
+                        of the second option.
+                    </p>
+                </div>
+            </div>
+            <iframe src="https://marvelapp.com/prototype/7ci9fj0"></iframe>
+        </div>
+    </body>
+</html>
