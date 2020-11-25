@@ -15,12 +15,12 @@ let finalProjectStages = {
         "url": "./ipm/final-project/03-1st-prototype.pdf"
     },
     "04": {
-        "date": "27/11/2020",
+        "date": "30/11/2020",
         "title": "Computational prototype",
         "url": "javascript:;"
     },
     "05": {
-        "date": "??/??/2020",
+        "date": "06/12/2020",
         "title": "Heuristic evaluation",
         "url": "javascript:;"
     },
