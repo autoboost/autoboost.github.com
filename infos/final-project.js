@@ -25,7 +25,7 @@ let finalProjectStages = {
         "url": "javascript:;"
     },
     "06": {
-        "date": "10/12/2020",
+        "date": "11/12/2020",
         "title": "Evaluation results and presentation",
         "url": "javascript:;"
     }
