@@ -22,7 +22,7 @@ let finalProjectStages = {
     "05": {
         "date": "06/12/2020",
         "title": "Heuristic evaluation",
-        "url": "javascript:;"
+        "url": "./ipm/final-project/05-heuristic-evaluation.pdf"
     },
     "06": {
         "date": "11/12/2020",
