@@ -21,8 +21,13 @@ let finalProjectStages = {
     },
     "05": {
         "date": "06/12/2020",
-        "title": "Heuristic evaluation",
-        "url": "./ipm/final-project/05-heuristic-evaluation.pdf"
+        "title": "Heuristic evaluation - Samucar",
+        "url": "./ipm/final-project/05-heuristic-evaluation-samucar.pdf"
+    },
+    "05": {
+        "date": "06/12/2020",
+        "title": "Heuristic evaluation - GetBuffed",
+        "url": "./ipm/final-project/05-heuristic-evaluation-getbuffed.pdf"
     },
     "06": {
         "date": "11/12/2020",
