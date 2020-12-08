@@ -19,12 +19,12 @@ let finalProjectStages = {
         "title": "Computational prototype",
         "url": "./ipm/final-project/04-computational-prototype.pdf"
     },
-    "05": {
+    "05.01": {
         "date": "06/12/2020",
         "title": "Heuristic evaluation - Samucar",
         "url": "./ipm/final-project/05-heuristic-evaluation-samucar.pdf"
     },
-    "05": {
+    "05.02": {
         "date": "06/12/2020",
         "title": "Heuristic evaluation - GetBuffed",
         "url": "./ipm/final-project/05-heuristic-evaluation-getbuffed.pdf"
