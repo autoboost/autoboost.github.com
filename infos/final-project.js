@@ -32,6 +32,6 @@ let finalProjectStages = {
     "06": {
         "date": "11/12/2020",
         "title": "Evaluation results and presentation",
-        "url": "javascript:;"
+        "url": "./ipm/final-project/06-evaluation-results-and-presentation.pdf"
     }
 };
